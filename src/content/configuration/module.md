@@ -113,7 +113,7 @@ W> 小心！resource 是文件的_解析_路径，这意味着符号链接的资
 所有一个接一个地进入的 loader，都有两个阶段：
 
 1. __pitching__ 阶段：loader 上的 pitch 方法，按照 `后置(post)、行内(normal)、普通(inline)、前置(pre)` 的顺序调用。更多详细信息，请查看 [ 越过 loader(pitching loader)](/api/loaders/#pitching-loader)。
-2. __normal__阶段：loader 上的 常规方法，按照 `前置(pre)、行内(normal)、普通(inline)、后置(post)` 的顺序调用。模块源码的转换，发生在这个阶段。
+2. __normal__阶段：loader 上的 常规方法，按照 `前置(pre)、普通(normal)、行内(inline)、后置(post)` 的顺序调用。模块源码的转换，发生在这个阶段。
 
 所有普通 loader 可以通过在请求中加上 `!` 前缀来忽略（覆盖）。
 
